@@ -1,0 +1,116 @@
+/* start style for nav */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 20;
+    width: 60%;
+    height: 100%;
+    background-color: #CDD6D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s linear;
+    box-shadow: inset 0px 0px 20px #000000;
+}
+
+nav.open{
+    left: 0;
+}
+
+nav ul{
+    list-style: none;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
+    padding: 1rem;
+    cursor: pointer;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #233656;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    transition: all .5s linear;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: .1rem;
+}
+
+nav ul li:hover a{
+    text-shadow: 0px 0px 20px #000000;
+}
+
+.menu-wrapper {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    margin: auto;
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+    width: 50px;
+    height: 7px;
+}
+
+.hamburger-menu {
+    position: relative;
+    transform: translateY(25px);
+    background: white;
+    transition: all 0ms 300ms;
+}
+
+.hamburger-menu.animate {
+    background: rgba(255, 255, 255, 0);
+}
+
+.hamburger-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    background: white;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    background: white;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: inset 0px 0px 3px #000000;
+    border-radius: 30%;
+}
+
+.hamburger-menu.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: inset 0px 0px 3px #000000;
+    border-radius: 30%;
+}
+
+/* stop style for nav */

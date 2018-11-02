@@ -1,0 +1,79 @@
+/* start style for header */
+
+header.showcase{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.showcase::after{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../img/pexels-photo-574070.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    transition: all 1s;
+}
+
+header.showcase:hover::after{
+    filter: blur(0px);
+}
+
+header.showcase:hover .content{
+    filter: blur(2px);
+}
+
+header.showcase .content{
+    position: absolute;
+    z-index: 2;
+    transition: all 1s;
+    text-align: center;
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header.showcase .content img.logo{
+    width: 50%;
+}
+
+header.showcase .content p.text{
+    font-size: 2rem;
+    width: 70%;
+    margin: 0 auto;
+    font-family: 'Patrick Hand', cursive;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.showcase .content p.text::after{
+    content: '';
+    display: block;
+    background-color: black;
+    height: 100%;
+    width: 3px;
+    padding: .3rem;
+    animation: type  .5s linear infinite alternate;
+}
+
+@keyframes type{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* stop style for header */
